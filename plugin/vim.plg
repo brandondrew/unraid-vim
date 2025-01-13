@@ -4,7 +4,7 @@
 <PLUGIN
   name="vim"
   author="Brandon"
-  version="2024.10.05.1"
+  version="2025.xx.xx"
   pluginURL="https://raw.githubusercontent.com/brandondrew/unraid-vim/main/plugin/vim.plg"
   support="https://forums.unraid.net/profile/280264-brazyl/"
   icon="pen-nib"
@@ -12,6 +12,9 @@
 
 <CHANGES>
 <![CDATA[
+###2025.01.12###
+ - Added libsodium to plugin
+
 ###2024.10.05.1###
 - Initial (experimental) release
 - Don't expect this to work yet.
@@ -21,6 +24,11 @@
 <FILE Name="/boot/config/plugins/vim/vim-9.0.2127-x86_64-1_slack15.0.txz" Run="upgradepkg --install-new">
 <URL>http://mirrors.slackware.com/slackware/slackware64-15.0/patches/packages/vim-9.0.2127-x86_64-1_slack15.0.txz</URL>
 <SHA256>b88c295f046aafff8455a133d7c70eb9457256291eabf7691d6569f59323034f</SHA256>
+</FILE>
+
+<FILE Name="/boot/config/plugins/vim/libsodium-1.0.18-x86_64-3.txz" Run="upgradepkg --install-new">
+<URL>http://mirrors.slackware.com/slackware/slackware64-15.0/slackware64/l/libsodium-1.0.18-x86_64-3.txz</URL>
+<SHA256>bfd654a4addc679b287a0d94674969f73b93218fcbbe4f578b65a68c214ddd0a</SHA256>
 </FILE>
 
 <FILE Name="/boot/config/plugins/vim/libagentcrypt-1.0.6.tgz" Run="installpkg">
@@ -43,6 +51,7 @@ You aren't limited to vi and nano anymore.  You're welcome.
 <INLINE>
 <![CDATA[
 removepkg vim;
+removepkg libsodium;
 
 # Remove possible leftovers
 rm -rf /usr/local/emhttp/plugins/vim;
