@@ -4,7 +4,7 @@
 <PLUGIN
   name="vim"
   author="Brandon"
-  version="2025.xx.xx"
+  version="2026.05.18"
   pluginURL="https://raw.githubusercontent.com/brandondrew/unraid-vim/main/plugin/vim.plg"
   support="https://forums.unraid.net/profile/280264-brazyl/"
   icon="pen-nib"
@@ -12,6 +12,9 @@
 
 <CHANGES>
 <![CDATA[
+###2026.04.18###
+ - Fix update vim package
+
 ###2025.01.12###
  - Added libsodium to plugin
 
@@ -22,8 +25,8 @@
 </CHANGES>
 
 <FILE Name="/boot/config/plugins/vim/vim-9.0.2127-x86_64-1_slack15.0.txz" Run="upgradepkg --install-new">
-<URL>http://mirrors.slackware.com/slackware/slackware64-15.0/patches/packages/vim-9.0.2127-x86_64-1_slack15.0.txz</URL>
-<SHA256>b88c295f046aafff8455a133d7c70eb9457256291eabf7691d6569f59323034f</SHA256>
+<URL>http://mirrors.slackware.com/slackware/slackware64-15.0/patches/packages/vim-9.1.2072-x86_64-1_slack15.0.txz</URL>
+<SHA256>9bbc0745ebcb39a221710d7874fb360a6bf7a7e808c2e657513e61b99635b315</SHA256>
 </FILE>
 
 <FILE Name="/boot/config/plugins/vim/libsodium-1.0.18-x86_64-3.txz" Run="upgradepkg --install-new">
